@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MydayComponent } from './myday.component';
+import { ErroPageComponent } from './erro-page.component';
 
-describe('MydayComponent', () => {
-  let component: MydayComponent;
-  let fixture: ComponentFixture<MydayComponent>;
+describe('ErroPageComponent', () => {
+  let component: ErroPageComponent;
+  let fixture: ComponentFixture<ErroPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MydayComponent ]
+      declarations: [ ErroPageComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MydayComponent);
+    fixture = TestBed.createComponent(ErroPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

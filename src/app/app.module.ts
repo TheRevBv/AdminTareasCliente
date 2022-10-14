@@ -1,18 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { AppRoutingModule } from '@app/app-routing.module';
+import { AppComponent } from '@app/app.component';
+import { ErroPageComponent } from './shared/erro-page/erro-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidebarComponent
+    ErroPageComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
