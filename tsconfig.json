@@ -8,7 +8,7 @@
       "@material/*": ["app/material/*"],
       "@shared/*": ["app/shared/*"],
       "@task/*": ["app/task/*"],
-      "src": ["../src/*"]
+      "@src": ["../src/*"]
     },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
