@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { AgregarListaComponent } from '@task/pages/agregar-lista/agregar-lista.component';
+
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
+  selector: 'app-agregar-lista',
+  templateUrl: './agregar-lista.component.html',
+  styleUrls: ['./agregar-lista.component.css']
 })
-export class HomeComponent implements OnInit {
+export class AgregarListaComponent implements OnInit {
   showModal: boolean = false;
   constructor() { }
 

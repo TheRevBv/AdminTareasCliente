@@ -1,1 +1,29 @@
-<p>listado works!</p>
+<div class="alert-success" role="alert">Completadas</div>
+<div *ngFor="let tarea of tareas">
+  <ng-container *ngIf="tarea.estatus">
+    <app-tarea-card [tarea]="tarea"></app-tarea-card>
+  </ng-container>
+</div>
+<div class="alert-danger" role="alert">No Completadas</div>
+<div *ngFor="let tarea of tareas">
+  <ng-container *ngIf="!tarea.estatus">
+    <app-tarea-card [tarea]="tarea"></app-tarea-card>
+  </ng-container>
+</div>
+<!-- <div *ngFor="let tarea of tareas">
+  <app-tarea-card [tarea]="tarea"></app-tarea-card>
+</div>
+
+<app-agregar (click)="mostrarModal(showModal)" [tarea]="task"></app-agregar> -->
+
+<div fxLayout="row-reverse" fxLayoutAlign="start start" fxLayoutGap="gappx">
+  <a
+    type="button"
+    style="position: fixed; right: 34px; bottom: 34px"
+    mat-fab
+    color="primary"
+    routerLink="/tareas/agregar"
+  >
+    <mat-icon>add</mat-icon>
+  </a>
+</div>

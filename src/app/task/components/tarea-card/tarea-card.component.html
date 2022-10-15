@@ -1,0 +1,37 @@
+<!-- <mat-card [routerLink]="['/tareas/', tarea.id]"> -->
+<mat-card>
+  <div fxLayout="row">
+    <button
+      mat-icon-button
+      color="accent"
+      fxFlex="10"
+      *ngIf="tarea.estatus as true; else elseTemplate"
+      (click)="cambiarEstatus()"
+    >
+      <mat-icon>task </mat-icon>
+    </button>
+    <ng-template #elseTemplate>
+      <button
+        mat-icon-button
+        color="warn"
+        fxFlex="10"
+        (click)="cambiarEstatus()"
+      >
+        <mat-icon>task </mat-icon>
+      </button>
+    </ng-template>
+    <span fxFlex="70">{{ tarea.nombre }}</span>
+    <a
+      fxFlex="10"
+      mat-icon-button
+      color="primary"
+      [routerLink]="['/tareas/editar/', tarea.id]"
+    >
+      <mat-icon>edit</mat-icon>
+    </a>
+    <button fxFlex="10" mat-icon-button color="warn" (click)="Eliminar()">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</mat-card>
+<mat-divider></mat-divider>

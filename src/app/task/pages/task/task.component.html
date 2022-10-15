@@ -1,1 +1,4 @@
-<p>task works!</p>
+<h1>Mis tareas de hoy</h1>
+<div *ngFor="let tarea of tareas">
+  <app-tarea-card [tarea]="tarea"></app-tarea-card>
+</div>

@@ -1,1 +1,44 @@
-<p>agregar works!</p>
+<h1 style="margin-left: 4rem">
+  Nueva tarea - <small>{{ tarea.nombre }}</small>
+</h1>
+<div fxLayout="row" fxLayoutAlign="center start">
+  <div fxFlex="50" fxLayout="column">
+    <div fxLayout="row" fxLayoutGap="4rem">
+      <mat-form-field>
+        <mat-label>Titulo</mat-label>
+        <input matInput [(ngModel)]="tarea.nombre" type="text" required />
+      </mat-form-field>
+      <mat-checkbox [(ngModel)]="tarea.estatus" class="example-margin"
+        >Realizada</mat-checkbox
+      >
+    </div>
+    <mat-form-field>
+      <mat-label>Descripción</mat-label>
+      <textarea matInput [(ngModel)]="tarea.descripcion"></textarea>
+    </mat-form-field>
+    <!-- <mat-form-field>
+      <mat-label>Fecha</mat-label>
+      <input matInput type="date" required />
+    </mat-form-field> -->
+    <mat-form-field appearance="fill">
+      <mat-label>Selecciona una fecha de realización</mat-label>
+      <input
+        matInput
+        [(ngModel)]="tarea.fechaProgramada"
+        [matDatepicker]="picker"
+        required
+      />
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <br />
+    <button mat-raised-button (click)="Guardar()" color="primary">
+      Guardar
+    </button>
+    <br />
+    <button mat-raised-button (click)="Eliminar()" color="warn">
+      Eliminar
+    </button>
+  </div>
+</div>

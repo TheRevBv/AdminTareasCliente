@@ -1,1 +1,60 @@
-<p>home works!</p>
+<mat-sidenav-container fullscreen>
+  <!-- Inicia Sidenav -->
+  <mat-sidenav #sidenav mode="push">
+    <mat-toolbar>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Menu principal</span>
+    </mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLinkActive="active" routerLink="/tareas/listado">
+        <mat-icon matListIcon>home</mat-icon>
+        <span matLine>Inicio</span>
+      </a>
+      <a mat-list-item routerLinkActive="active" routerLink="/tareas/mi-dia">
+        <mat-icon matListIcon>task</mat-icon>
+        <span matLine>Tareas</span>
+      </a>
+      <!-- <mat-divider></mat-divider>
+      <mat-list>
+        <a
+          mat-list-item
+          routerLinkActive="active"
+          routerLink="/tareas/agregar-lista"
+        >
+          <mat-icon matListIcon>add</mat-icon>
+          <span matLine (click)="toggleModal()">Agregar lista</span>
+        </a>
+        <mat-divider></mat-divider>
+        <a mat-list-item routerLinkActive="active" routerLink="/tareas/listas">
+          <mat-icon matListIcon>view_list</mat-icon>
+          <span matLine>Lista2</span>
+        </a>
+        <a mat-list-item routerLinkActive="active" routerLink="/tareas/listas">
+          <mat-icon matListIcon>view_list</mat-icon>
+          <span matLine>Lista2</span>
+        </a>
+      </mat-list> -->
+    </mat-nav-list>
+  </mat-sidenav>
+  <!-- Termina Sidenav -->
+  <!-- Inicia toolbar -->
+  <mat-toolbar>
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <a
+      routerLink="/tareas"
+      style="
+        text-decoration: none;
+        color: #000;
+        font-size: 1.5rem;
+        font-weight: 500;
+      "
+      >Administrador de tareas</a
+    >
+  </mat-toolbar>
+  <!-- Termina toolbar -->
+  <router-outlet></router-outlet>
+</mat-sidenav-container>
